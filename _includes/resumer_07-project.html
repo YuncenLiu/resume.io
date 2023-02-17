@@ -5,10 +5,12 @@
 
             <div class="ref-box hreview">
 
+
                 <div class="ref-info">
+                    <img src="{{ '/styles/img/projectImg.png' | prepend: site.baseurl }}" alt="">
                     <div class="ref-author">
-                        <strong style="font-size: large">保单登记平台</strong>
-                        <span>2022年9月-2023年1月</span>
+                        <strong style="font-size: large">中保引擎</strong>
+                        <span>2022年8月 - 2023年1月</span>
                     </div>
 
                     <blockquote class="ref-cont clear-mrg">
@@ -16,7 +18,7 @@
                         </p>
                         <p>技术：SpringBoot、MyBatis-plus、Vue、Oracle、DataX、禅道、jmeter、Postman、echarts、Fullcalendar
                         </p>
-                        <p>项目责任：作为项目负责人，带领7人团队0-1实现团队组建招聘、技术选型、框架搭建、架构设计、需求沟通与再沟通，开发、测试、上线、运营等完整经历。
+                        <p>作为项目负责人，带领7人团队0-1实现团队组建招聘、技术选型、框架搭建、架构设计、需求沟通与再沟通，有开发、测试、上线、运营等完整经历。管理项目进度同时自己也做开发，解决较为复杂的问题。因为保监会开放的报送窗口期非常狭小，要求HTTP方式报送，同时数据量非常庞大，要求在收到请求3秒内完成报送。在排查一系列网络、设备、程序后，再对JVM、连接池、容器的参数进行修改
                         </p>
                     </blockquote>
                 </div>
@@ -27,16 +29,68 @@
 
                 <div class="ref-info">
                     <div class="ref-author">
-                        <strong style="font-size: large">数据交换平台</strong>
-                        <span>2021年8月-2022年4月</span>
+                        <strong style="font-size: large">核心鉴权系统</strong>
+                        <span>2022年5月-2022年11月</span>
                     </div>
 
                     <blockquote class="ref-cont clear-mrg">
-                        <p>基于微服务构建的大数据存储平台，通过集成海量数据来源、统一接口、隔离加密、标签化，实现消息快速消费。
+                        <p>简介：向上对接我司第三方OA系统，向下对接公司所有自研应用。使用基于CAS的SSO单点统一管理所有应用的登录问题，解决运维人员频繁针对入职、离职同事的注册、注销账号问题。
                         </p>
-                        <p>技术框架：SpringCloud、SpringBoot、Mybatis-plus、Redis、Kafka、zookeeper、Oracle、MySQL
+                        <p>技术：SpringCloud、MyBatis-plus、Vue、CAS单点、SpringSecurity、echarts、钉钉开放平台
                         </p>
-                        <p>项目责任：数据源接入管理、数据解析、内外部数据输出、数据持久化。嵌入quartz定时调度，先后嵌入 xxl-job、DolphinScheduler 调度工具
+                        <p>频繁需要对各个业务、技术部门的离职人员、入职人员，主要是离职人员的各系统进行销户操作，主动向领导提出了此系统的研发，后续独立开发此系统，同时兼顾改造其他系统，使所有应用统一集成到CAS中作登录验证，解决了人为销户的操作。对接钉钉办公，及时处理系统异常信息，彻底解放了该类型问题的人力需求。
+                        </p>
+                    </blockquote>
+                </div>
+            </div>
+
+            <div class="ref-box hreview">
+
+                <div class="ref-info">
+                    <div class="ref-author">
+                        <strong style="font-size: large">大数据交易中心</strong>
+                        <span>2022年1月-2022年10月</span>
+                    </div>
+
+                    <blockquote class="ref-cont clear-mrg">
+                        <p>简介：基于分布式、微服务架构的大数据存储平台，通过集成海量数据来源、统一接口、隔离加密、标签化，实现消息快速消费。面向订购了我司数据服务的客户，此平台只做了最后一步传输操作，支持HTTP主动调用、SFTP定时传输，并计算客户调用成功次数分批计价。
+                        </p>
+                        <p>技术：SpringCloud、Zuul、Eureka、Mybatis-plus、Redis、Kafka、zookeeper
+                        </p>
+                        <p>对接数据库：Oracle、MySQL、MongoDB、PostgreSQL、SQLServer、ElasticSearch、Hive、Hbase、Spark
+                        </p>
+                        <p>负责数据源接入管理、数据加密脱敏、数据输出、数据持久化。项目初期使用quartz定时调度，先后嵌入 xxl-job、DolphinScheduler 调度工具进行优化，ELK日志管理。Grafana+Prometheus 作为运维工具监控各服务指标，后续将其他所有项目都对接到了 Grafana+Prometheus 中，以钉钉+邮箱的方式发出告警信息。
+                        </p>
+                    </blockquote>
+                </div>
+            </div>
+
+            <div class="ref-box hreview">
+                <div class="ref-info">
+                    <div class="ref-author">
+                        <strong style="font-size: large">保单实名查验</strong>
+                        <span>2021年7月 - 2022年2月</span>
+                    </div>
+
+                    <blockquote class="ref-cont clear-mrg">
+                        <p>简介：这是一个维护了十年的保险类系统，仅支持IE6，因为框架本身原因，无法满足新增需求。因此对系统进行改造翻新，前系统使用的是中科软较早版本的LIS框架，用法比较原始，如JSP前端直接new后端，四处遍布sql语句，很多工具没有封装，各个工程相互拷贝。
+                        </p>
+                        <p>改造策略：
+                            <ul style="font-size: small">
+                                <li>将原第三方的 jar 包进行封装，统一命名和管理改造，废弃一部分第三方框架 jar
+                                </li>
+                                <li>持久层框架修改为 Mybatis，规范 SQL ，数据库表结构不做改变
+                                </li>
+                                <li>根据前端提供的页面开发 controller 层
+                                </li>
+                                <li>算法和逻辑做平移
+                                </li>
+                                <li>测试每个页面、每个接口功能是否正常，整体业务测试走通、修复bug
+                                </li>
+                            </ul>
+                        </p>
+
+                        <p>改造的整个过程我全程参与，主要负责系统管理、字典映射、数据查验模块的翻新工作
                         </p>
                     </blockquote>
                 </div>
@@ -51,33 +105,86 @@
                     </div>
 
                     <blockquote class="ref-cont clear-mrg">
-                        <p>按照监管数据标准要求。完成检查分析系统所需数据，整理、报送等工作。报送周期包括但不限于日报、月报，报送范围有全量和增量报送。<strong>其中全量数据可达十亿条，增量数据不低于千万条。</strong>
+                        <p>简介：国家银保监监管要求，各保险机构上报数据，面向各保险机构招标。报送周期日报、月报，报送范围有全量和增量。<strong>其中全量数据可达数十亿条，增量数据不低于千万条。</strong>大量数据经过Java程序进行校验、脱敏等加工流程，最终以压缩文件形式上传指定到SFTP服务器，银保监会会在一段时间后反馈报送结果。
                         </p>
-                        <p>技术框架：Spring、SpringMVC、Mybatis、Oracle、Weblogic、DataX、Sqluldr、sqldump、activity、Echarts
+                        <p>技术：SpringCloud、SpringMVC、Mybatis、MySQL、Oracle、Weblogic、DataX、Sqluldr、sqldump、activity、LayUI
                         </p>
-                        <p>负责项目：数据校验、脱敏、报送模块，数据库表字段设计，前后端开发，搭建jenkins实现产品自动化部署，开发报表系统，搭配POI将数据与文档结合。
+                        <p>从实习做到核心研发，负责数据校验、脱敏、报送模块，数据库表字段设计，前后端开发，搭建jenkins实现产品自动化部署，开发报表系统，搭配POI将数据转换为Word、Excel、CSV、可以以柱状图、折线图、饼图的形式展现在PPT中。为优化报送速率，调试JVM参数、线程池、连接池、数据库配置、服务器配置等多种底层服务参数，对大文件的读取和压缩进行优化。参与设计、研发、客户场地部署、产品讲解等各类工作。
                         </p>
                     </blockquote>
                 </div>
             </div>
 
+
             <div class="ref-box hreview">
+
                 <div class="ref-info">
                     <div class="ref-author">
-                        <strong style="font-size: large">医疗人力资源管理系统</strong>
-                        <span>2020年12月-2021年4月</span>
+                        <strong style="font-size: large">医疗人力资源绩效管理系统 </strong>
+                        <span>2020年11月-2021年7月</span>
                     </div>
 
                     <blockquote class="ref-cont clear-mrg">
-                        <p>为医院提供完善的人力资源管理功能，为每个员工建立详尽的人事档案。分配各个科室病房医生护士的资源，分析绩效考勤。
+                        <p>简介：为医院提供完善的人力资源管理功能，为每个员工建立详尽的人事档案。分配各个科室病房医生护士的资源，管理病房病床、病种、药品，分析绩效考勤。
                         </p>
-                        <p>技术框架：SpringCloud、Mybatis-Plus、Nacos、MySQL、Redis、Vue、ElementUI
+                        <p>技术：SpringCloud、Mybatis-Plus、Nacos、MySQL、Redis、Vue、ElementUI
                         </p>
-                        <p>负责项目：独立开发实现前后端各模块，使用开源框架，敏捷式快速搭建项目，实现考科室、人事、考勤、绩效、职称审批、合同、月末结账等管理模块。使用 Ecarts、 FullCalendar 等前端技术将数据可视化。
+                        <p>使用开源框架，独立开发实现前后端各模块，使用开源框架，敏捷式快速搭建项目，实现科室、人事、考勤、绩效、职称审批、合同、月末结账等管理模块。使用 Ecarts、 FullCalendar 等前端技术将数据可视化。
                         </p>
                     </blockquote>
                 </div>
             </div>
+
+
+            <div class="ref-box hreview">
+
+                <div class="ref-info">
+                    <div class="ref-author">
+                        <strong style="font-size: large">银行大额报送</strong>
+                        <span>2020年4月-2020年12月</span>
+                    </div>
+
+                    <blockquote class="ref-cont clear-mrg">
+                        <p>简介：中银富登银行需求，针对大额交易进行上报，个人大于20万，企业大于200万的数据加密后切片装载至XML文件进行上报
+                        </p>
+                        <p>技术：Spring、Mybatis、Oracle
+                        </p>
+                        <p>主要负责存储过程编写、数据转换为XML进行压缩。因为银行内网系统和外网是隔离的，只能通过不大于1M的邮件单向传递，环境搭建比较困难。
+                        </p>
+                    </blockquote>
+                </div>
+            </div>
+
+
+            <div class="ref-box hreview">
+
+                <div class="ref-info">
+                    <div class="ref-author">
+                        <strong style="font-size: large">贾维斯 (开源)</strong>
+                        <span>2018-至今</span>
+                    </div>
+
+                    <blockquote class="ref-cont clear-mrg">
+                        <p>简介：这是我个人自行搭建的服务，供我个人学习，提供便捷服务，从大二最初的单体服务到现在共19个微服务的分布式应用  gateway 网关、auth 权限、system 系统、user 用户、log 日志、resource 资源（短信、邮箱、对象存储）、Job 调度、Flow 工作流、develop 开发（代码生成、数据源、数据同步）、blog 博客、Manage 管理、pusher 推送、stock 股市分析、admin、zipkin、turbine 等多个微服务治理
+                        </p>
+                        <ul style="font-size: small">
+                            <li>家庭卫士 602，通过微信提醒室友打扫出租屋内卫生，每天倒垃圾、每周大扫除
+                            </li>
+                            <li>该喝水了微信小程序，定时提醒喝水服务、情侣纪念日等微信推送服务
+                            </li>
+                            <li>股市分析，爬取百度股票信息，对股票数据进行学习推导，研究过自然语言
+                            </li>
+                            <li>自我管理，两个维度：时间、金钱，时间方面针对苹果系统的日历进行解析，分析日常活动占用时间，计算每周花销，最后总结推送
+                            </li>
+                            <li>博客，技术文章管理，网站埋点，获取来访用户地区、IP等信息，学习过网络攻防，了解常用的Web渗透技术。
+                            </li>
+                        </ul>
+                        <p>在21、22年左右购买了多台阿里云服务器实现真实集群环境。被攻击过、黑过，数据库数据被劫持过。在安全和微服务方面有极大提升。
+                        </p>
+                    </blockquote>
+                </div>
+            </div>
+
 
         </div><!-- .col-sm-6 -->
 

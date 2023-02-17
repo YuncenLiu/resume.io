@@ -1,7 +1,8 @@
 <section class="section brd-btm" id="certification">
-    <h2 class="title-thin text-muted">获得证书</h2>
 
-    <div class="row">
+    <h2 class="title-thin text-muted">获得证书 <a id="openCertification"> 》展开</a></h2>
+
+    <div class="row" id="myCer" style="display: none">
         <div class="col-sm-6 clear-mrg">
             <div class="award-box">
                 <figure class="award-img">
@@ -58,4 +59,16 @@
             </div>
         </div><!-- .col-sm-6 -->
     </div><!-- .row -->
+    <script>
+        var open = document.getElementById('openCertification')
+        open.onclick = function (){
+            var my = document.getElementById('myCer');
+            let status = my.getAttribute("style");
+            if (status === "display: none"){
+                my.setAttribute("style","display: block")
+            }else{
+                my.setAttribute("style","display: none")
+            }
+        }
+    </script>
 </section><!-- .section -->
