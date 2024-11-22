@@ -7,18 +7,32 @@
 
 
                 <div class="ref-info">
-                    <img src="{{ '/styles/img/projectImg.png' | prepend: site.baseurl }}" alt="">
+                    <!--<img src="{{ '/styles/img/projectImg.png' | prepend: site.baseurl }}" alt="">-->
                     <div class="ref-author">
-                        <strong style="font-size: large">中保引擎</strong>
-                        <span>2022年8月 - 2023年1月</span>
+                        <strong style="font-size: large">EAST监管报送系统（三期工程）</strong>
+                        <span>2020年9月 - 至今（一期  5个月）</span>
                     </div>
 
                     <blockquote class="ref-cont clear-mrg">
-                        <p>简介：中国银保监会对各保险公司保险保单的数据监管。作为上报工具使用，针对承保、退保、理赔、贷款、批改这五类数据类型进行上报，不仅要求上报成功，上报失败的数据也要提供修复功能。内嵌定时、自动化流程。有查验、抽数、校验、报送等模块。
+                        <p>简介：监管要求定期采集业务数据进行上报，特点是海量数据，核心功能有数据采集、校验、脱敏、报文生成，通过集成企业OA、钉钉、企业微信为报送流程赋能。
                         </p>
-                        <p>技术：SpringBoot、MyBatis-plus、Vue、Oracle、DataX、禅道、jmeter、Postman、echarts、Fullcalendar
+                        <p>技术：SpringBoot负载均衡架构，MyBatis、JPA、JdbcTemplate ORM技术，前端使用JQuery、Freemark、LayUI、Fullcalendar日历组件，工作流引擎使用Activity，数据处理工具DataX、Sqluldr、sqldump等，Quartz做定时任务，Oracle、MySQL 、Postgre多类型数据库应用。
                         </p>
-                        <p>作为项目负责人，带领7人团队0-1实现团队组建招聘、技术选型、框架搭建、架构设计、需求沟通与再沟通，有开发、测试、上线、运营等完整经历。管理项目进度同时自己也做开发，解决较为复杂的问题。因为保监会开放的报送窗口期非常狭小，要求HTTP方式报送，同时数据量非常庞大，要求在收到请求3秒内完成报送。在排查一系列网络、设备、程序后，再对JVM、连接池、容器的参数进行修改
+                        <p>负责：
+                        <ul style="font-size: small">
+                            <li>1. 一期、二期的核心功能前后端开发，数据库字段、字典设计，业务流程设计。
+                            </li>
+                            <li>2. 分析监管需求和各保险公司客户的个性化需求，通过整合需求获取用例，分析优先级进行结构化开发。
+                            </li>
+                            <li>3. 抽取公共模块作为父模块，子模块为各个不同客户公司，使用Git进行管理，相互独立又形成依赖。
+                            </li>
+                            <li>4. 采集模块，对大文件采用流处理技术；POI技术生成包含图表附件等多种新特性的PPT、World、Excel。
+                            </li>
+                            <li>5. 多线程进行校验、脱敏，后续提升脱敏效率改造为使用 Sqluldr、sqldump 工具，读文本效率比读数据库快很多，最后优化为DataX，可对接多种数据库。通过调整JVM参数有效提升效率。
+                            </li>
+                            <li>6. 三期，优化系统自动化流程，提升企业报送效率，减少运维工作量。报送流程同步企业OA、通过对接钉钉和企业微信对指定用户发送消息和待办。
+                            </li>
+                        </ul>
                         </p>
                     </blockquote>
                 </div>
@@ -29,16 +43,34 @@
 
                 <div class="ref-info">
                     <div class="ref-author">
-                        <strong style="font-size: large">核心鉴权系统</strong>
-                        <span>2022年5月-2022年11月</span>
+                        <strong style="font-size: large">大数据中台</strong>
+                        <span>2022年1月 - 至今</span>
                     </div>
 
                     <blockquote class="ref-cont clear-mrg">
-                        <p>简介：向上对接我司第三方OA系统，向下对接公司所有自研应用。使用基于CAS的SSO单点统一管理所有应用的登录问题，解决运维人员频繁针对入职、离职同事的注册、注销账号问题。
+                        <p>简介：B2B企业级数据中台，SaaS、PASS架构，作为各部门数据汇聚层，负责部门与部门、企业与中介机构之间的数据接入与接出
                         </p>
-                        <p>技术：SpringCloud、MyBatis-plus、Vue、CAS单点、SpringSecurity、echarts、钉钉开放平台
+                        <p>技术：SpringCloudAlibaba分布式微服务架构，涉及服务治理技术包括 Nacos、Feign、Hysttrix、Ribbon、Dubbo、ZipKin、Skywalking，消息队列 Kafka 处理实时、准实时数据。Seata分布式事务、Redis分布式锁确保临界资源数据一致性。引入Minio、腾讯云等对象存储服务。对接大数据应用，Hive数据库、ClickHouse数据库，调度由Infomatic和DolphinScheduler分布式调度中心实现。Selenium 、DrissionPage  Web自动化。DevOps持续集成与交付。
                         </p>
-                        <p>频繁需要对各个业务、技术部门的离职人员、入职人员，主要是离职人员的各系统进行销户操作，主动向领导提出了此系统的研发，后续独立开发此系统，同时兼顾改造其他系统，使所有应用统一集成到CAS中作登录验证，解决了人为销户的操作。对接钉钉办公，及时处理系统异常信息，彻底解放了该类型问题的人力需求。
+                        <p>负责：
+                        <ul style="font-size: small">
+                            <li>1. 对平台 Gateway 网关服务改造，自定义配置路由规则，对所有通过网关的请求进行日志分级存档，重要业务日志通过ELK采集分析。
+                            </li>
+                            <li>2. OA系统对接本系统实现审批后自动化任务，例如 开通VPN、离职关闭权限等
+                            </li>
+                            <li>3. 业务实时、准实时数据通过 Kafka 进行消费，涉及到企业外部资源也都考虑kafka作为中间件。
+                            </li>
+                            <li>4. 通过引入大数据服务组件，实现海量数据处理能力。DolphinScheduler发起调度，将存储在Oracle数据通过sqoop同步到HiveODS层，通过DWD、DWS、ADS加工，通过DataX同步到ClickHouse，供BI数据平台查询。
+                            </li>
+                            <li>5. 分布式调度 Infomatic，处理每日增量、全量数据，对需要保留历史轨迹通过拉链表实现。每日实时监控分析也从这个调度中心触发。
+                            </li>
+                            <li>6. 通过Selenium 、DrissionPage 完成Web自动化操作、抓取页面信息、截图进行持久化、消息推送.
+                            </li>
+                            <li>7. 开发多数据源、数据集，实现配置化获取数据仓库的数据，类似API-JSON，提供RestFull接口，通过调度将数据以二进制存储，SFTP推送。也支持反向通过接口、文件写入数据库。
+                            </li>
+                            <li>8. DevOps方面，搭建Jenkins、Nexus环境，集成数据中台实现自动化构建，通过对象存储实现自动化部署，Prometheus探测服务健康，实现所有系统的上线发版、版本回退。建立完善版本控制机制。
+                            </li>
+                        </ul>
                         </p>
                     </blockquote>
                 </div>
@@ -48,18 +80,30 @@
 
                 <div class="ref-info">
                     <div class="ref-author">
-                        <strong style="font-size: large">大数据交易中心</strong>
-                        <span>2022年1月-2022年10月</span>
+                        <strong style="font-size: large">统一数据平台BI</strong>
+                        <span>2022年1月 - 至今</span>
                     </div>
 
                     <blockquote class="ref-cont clear-mrg">
-                        <p>简介：基于分布式、微服务架构的大数据存储平台，通过集成海量数据来源、统一接口、隔离加密、标签化，实现消息快速消费。面向订购了我司数据服务的客户，此平台只做了最后一步传输操作，支持HTTP主动调用、SFTP定时传输，并计算客户调用成功次数分批计价。
+                        <p>简介：企业商业智能报表，Pass架构，面向全体人员，包括销售、业务、高层领导，通过关键绩效指标，基于分析结果，提供洞察与决策。提供投保、保全、续期、企划、运营、风险、销管、审计、资产、运维等公司全方位分析。支持复杂表格设计、鼠标拖拽维度分析，表单填报数据回填。
                         </p>
-                        <p>技术：SpringCloud、Zuul、Eureka、Mybatis-plus、Redis、Kafka、zookeeper
+                        <p>技术：SpringBoot单体式架构，兼容十几种数据库，基于CAS实现单点登录，完成对多个子系统的鉴权能力。依据平台能力实现多个标准化规范，包含数据接入接出、调度监控、系统监控。
                         </p>
-                        <p>对接数据库：Oracle、MySQL、MongoDB、PostgreSQL、SQLServer、ElasticSearch、Hive、Hbase、Spark
-                        </p>
-                        <p>负责数据源接入管理、数据加密脱敏、数据输出、数据持久化。项目初期使用quartz定时调度，先后嵌入 xxl-job、DolphinScheduler 调度工具进行优化，ELK日志管理。Grafana+Prometheus 作为运维工具监控各服务指标，后续将其他所有项目都对接到了 Grafana+Prometheus 中，以钉钉+邮箱的方式发出告警信息。
+                        <p>负责：
+                        <ul style="font-size: small">
+                            <li>1. 基于平台开发业务报表，分析ALM任务清单，对研发进度进行预警，提取各组别开发阶段的工作量，跟踪项目交付进度，统计BUG情况等涉及信息技术部各组管理层指标的展示。
+                            </li>
+                            <li>2. “两高一弱”工程针对漏洞的漏洞进行修复，不仅限于当前系统。
+                            </li>
+                            <li>3. 提取Prometheus系统监控数据，提取Infomatic、DolphinScheduler元数据解析实现系统、调度监控，对这些监控类设计表结构和存储方式，最后推送钉钉、短信预警。
+                            </li>
+                            <li>4. sqllineage 分析所有报表逻辑血缘关系，通过 DataHub 进行展示，显示字段级别的加工过程，提高数据组研发效率。
+                            </li>
+                            <li>5. 内嵌接口以实现复杂的逻辑算法，例如 IRR（收益率）、Rentention Rate（继续率）、NPV（净现值），填补数据加工缺陷。
+                            </li>
+                            <li>6. 调整JVM参数，使其减少STW。
+                            </li>
+                        </ul>
                         </p>
                     </blockquote>
                 </div>
@@ -68,12 +112,14 @@
             <div class="ref-box hreview">
                 <div class="ref-info">
                     <div class="ref-author">
-                        <strong style="font-size: large">保单实名查验</strong>
-                        <span>2021年7月 - 2022年2月</span>
+                        <strong style="font-size: large">律师门户网站</strong>
+                        <span>2022年7月-2022年8月</span>
                     </div>
 
                     <blockquote class="ref-cont clear-mrg">
-                        <p>简介：这是一个维护了十年的保险类系统，仅支持IE6，因为框架本身原因，无法满足新增需求。因此对系统进行改造翻新，前系统使用的是中科软较早版本的LIS框架，用法比较原始，如JSP前端直接new后端，四处遍布sql语句，很多工具没有封装，各个工程相互拷贝。
+                        <p>简介：企业知识门户网站，较好的SEO优化，初始化加载快，律师模块展示合伙人律师、各部门首席律师、其他律师信息，案例学习模块展示近期案例和优秀、典型案例，用户可以评论，提交问题、提交电话等信息，通过链接添加客服企微。上线后，百度搜索“山西科宪”网站链接在第一页显示，搜索“科宪律所”出现在前三。
+                        </p>
+                        <p>技术：独立完成；SpringBoot前后端分离架构，MySQL数据库，用户埋点统计PV、UV，接入百度搜索平台，百度地图API，响应式前端。首页使用原生HTML+Jquery，后台管理系统基于Saber二次开发采用Vue技术，DevOps基于Jenkins完成1个后段，2个前端自动化构建部署。
                         </p>
                         <p>改造策略：
                             <ul style="font-size: small">
