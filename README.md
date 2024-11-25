@@ -19,3 +19,14 @@ Jekyll build
 ```shell
 sed -i '' 's#/resume.io#.#g' _site/index.html
 ```
+
+查看远程地址
+```shell
+git remote -v
+```
+
+推送远程分支
+```shell
+git push gitee master
+git push origin master
+```
