@@ -121,23 +121,22 @@
                         </p>
                         <p>技术：独立完成；SpringBoot前后端分离架构，MySQL数据库，用户埋点统计PV、UV，接入百度搜索平台，百度地图API，响应式前端。首页使用原生HTML+Jquery，后台管理系统基于Saber二次开发采用Vue技术，DevOps基于Jenkins完成1个后段，2个前端自动化构建部署。
                         </p>
-                        <p>改造策略：
+                        <p>负责：
                             <ul style="font-size: small">
-                                <li>将原第三方的 jar 包进行封装，统一命名和管理改造，废弃一部分第三方框架 jar
+                                <li>1. 需求获取，绘制原型图确认功能模块，购买服务器、域名、CDN，对象存储，完成备案等基础设施建设。
                                 </li>
-                                <li>持久层框架修改为 Mybatis，规范 SQL ，数据库表结构不做改变
+                                <li>2. 响应式前端，支持多设备最佳视觉效果，用户埋点，抓取访问用户的IP、设备等信息
                                 </li>
-                                <li>根据前端提供的页面开发 controller 层
+                                <li>3. 前端对接百度地图API，首页支持导航到律所地址，通过解析访问用户IP生成坐标地址，结合Echarts显示地域访问量。
                                 </li>
-                                <li>算法和逻辑做平移
+                                <li>4. 接入百度搜索平台，将首页信息实时录入的文章标题、文章内容、网站地址提交到百度搜索平台。合理的请求头设置，规范的前端代码层次结构，有效提升SEO。
                                 </li>
-                                <li>测试每个页面、每个接口功能是否正常，整体业务测试走通、修复bug
+                                <li>5. 上传的图片经过google工具压缩上传，按配置自动裁切比例。
+                                </li>
+                                <li>6. 反爬措施，IP封锁高频访问，初期为Redis+布隆过滤器拦截，后采用Nginx拦截
                                 </li>
                             </ul>
                         </p>
-
-                        <p>改造的整个过程我全程参与，主要负责系统管理、字典映射、数据查验模块的翻新工作
-                        </p>
                     </blockquote>
                 </div>
             </div>
@@ -146,92 +145,32 @@
 
                 <div class="ref-info">
                     <div class="ref-author">
-                        <strong style="font-size: large">EAST 监管报送平台</strong>
-                        <span>2019年11月-2021年7月</span>
+                        <strong style="font-size: large">贾维斯（开源的人项目）</strong>
+                        <span>2018年9月-至今</span>
                     </div>
 
                     <blockquote class="ref-cont clear-mrg">
-                        <p>简介：国家银保监监管要求，各保险机构上报数据，面向各保险机构招标。报送周期日报、月报，报送范围有全量和增量。<strong>其中全量数据可达数十亿条，增量数据不低于千万条。</strong>大量数据经过Java程序进行校验、脱敏等加工流程，最终以压缩文件形式上传指定到SFTP服务器，银保监会会在一段时间后反馈报送结果。
+                        <p>简介：构建一个属于自己的系统是一件非常有挑战且有意义的事情，从最早 JSP，JavaServlet架构的学生会管理系统，主要用于门户网站，记录成员信息，发布通告，记录各班级考勤信息等用途。随着毕业后个人需求不断变化，知识库逐渐扩充，技术迭代为Spring框架，SpringBoot单体，前后端分离，演变到现在 SpringCloud微服务，实现职责单一，内聚解藕，以提升开发效率，减少运维成本，并达到个人需求为目的的开发思维。从18年开始购买云服务器，阿里云天翼计划10元/月，到后来多种资源，为充分学习验证微服务技术，于2023年购买6台2C4G服务器做运行环境，提供实时在线服务。各类微服务分别为：Gateway网关、Auth鉴权、System系统、User用户、Log日志、Resource资源（短信、邮箱、对象存储）、Job调度、Flow工作流、Develop开发（代码生成、数据源、数据同步）、Blog博客、Manage管理、Pusher推送、Stock股市分析、Admin、zipkin、turbin等多个微服务治理服务。独立维护服务过程中，被攻击过、黑过、当作采矿服务器、数据库劫持过，经历了各种社会毒打，学习过相关安全知识，具有一定的网络安全意识。
                         </p>
-                        <p>技术：SpringCloud、SpringMVC、Mybatis、MySQL、Oracle、Weblogic、DataX、Sqluldr、sqldump、activity、LayUI
-                        </p>
-                        <p>从实习做到核心研发，负责数据校验、脱敏、报送模块，数据库表字段设计，前后端开发，搭建jenkins实现产品自动化部署，开发报表系统，搭配POI将数据转换为Word、Excel、CSV、可以以柱状图、折线图、饼图的形式展现在PPT中。为优化报送速率，调试JVM参数、线程池、连接池、数据库配置、服务器配置等多种底层服务参数，对大文件的读取和压缩进行优化。参与设计、研发、客户场地部署、产品讲解等各类工作。
-                        </p>
-                    </blockquote>
-                </div>
-            </div>
-
-
-            <div class="ref-box hreview">
-
-                <div class="ref-info">
-                    <div class="ref-author">
-                        <strong style="font-size: large">医疗人力资源绩效管理系统 </strong>
-                        <span>2020年11月-2021年7月</span>
-                    </div>
-
-                    <blockquote class="ref-cont clear-mrg">
-                        <p>简介：为医院提供完善的人力资源管理功能，为每个员工建立详尽的人事档案。分配各个科室病房医生护士的资源，管理病房病床、病种、药品，分析绩效考勤。
-                        </p>
-                        <p>技术：SpringCloud、Mybatis-Plus、Nacos、MySQL、Redis、Vue、ElementUI
-                        </p>
-                        <p>使用开源框架，独立开发实现前后端各模块，使用开源框架，敏捷式快速搭建项目，实现科室、人事、考勤、绩效、职称审批、合同、月末结账等管理模块。使用 Ecarts、 FullCalendar 等前端技术将数据可视化。
-                        </p>
-                    </blockquote>
-                </div>
-            </div>
-
-
-            <div class="ref-box hreview">
-
-                <div class="ref-info">
-                    <div class="ref-author">
-                        <strong style="font-size: large">银行大额报送</strong>
-                        <span>2020年4月-2020年12月</span>
-                    </div>
-
-                    <blockquote class="ref-cont clear-mrg">
-                        <p>简介：中银富登银行需求，针对大额交易进行上报，个人大于20万，企业大于200万的数据加密后切片装载至XML文件进行上报
-                        </p>
-                        <p>技术：Spring、Mybatis、Oracle
-                        </p>
-                        <p>主要负责存储过程编写、数据转换为XML进行压缩。因为银行内网系统和外网是隔离的，只能通过不大于1M的邮件单向传递，环境搭建比较困难。
-                        </p>
-                    </blockquote>
-                </div>
-            </div>
-
-
-            <div class="ref-box hreview">
-
-                <div class="ref-info">
-                    <div class="ref-author">
-                        <strong style="font-size: large">贾维斯 (开源)</strong>
-                        <span>2018-至今</span>
-                    </div>
-
-                    <blockquote class="ref-cont clear-mrg">
-                        <p>简介：这是我个人自行搭建的服务，供我个人学习，提供便捷服务，从大二最初的单体服务到现在共19个微服务的分布式应用  gateway 网关、auth 权限、system 系统、user 用户、log 日志、resource 资源（短信、邮箱、对象存储）、Job 调度、Flow 工作流、develop 开发（代码生成、数据源、数据同步）、blog 博客、Manage 管理、pusher 推送、stock 股市分析、admin、zipkin、turbine 等多个微服务治理
-                        </p>
+                        <p>
                         <ul style="font-size: small">
-                            <li>家庭卫士 602，通过微信提醒室友打扫出租屋内卫生，每天倒垃圾、每周大扫除
+                            <li>1. 公网访问家庭服务，运营商开通动态IP，定时任务将IP存储云数据库，通过Gateway网关，提供服务转接能力，实现公网访问家庭服务。
                             </li>
-                            <li>该喝水了微信小程序，定时提醒喝水服务、情侣纪念日等微信推送服务
+                            <li>2. 家庭卫士，通过微信提示、短信提示，策略提示合租室友打算公共区卫生。
                             </li>
-                            <li>股市分析，爬取百度股票信息，对股票数据进行学习推导，研究过自然语言
+                            <li>3. 该喝水了，一款微信小程序，定时提醒喝水服务、情侣纪念日、天气预报等微信推送服务
                             </li>
-                            <li>自我管理，两个维度：时间、金钱，时间方面针对苹果系统的日历进行解析，分析日常活动占用时间，计算每周花销，最后总结推送
+                            <li>4. 股市分析，爬取百度股市通指数信息，对数据进行学习推导，研究过自然语言
                             </li>
-                            <li>博客，技术文章管理，网站埋点，获取来访用户地区、IP等信息，学习过网络攻防，了解常用的Web渗透技术。
+                            <li>6. 博客，更替过各种炫酷好看的首页模版，记录日常总结的技术文章，做网站埋点，分析用户IP和行为，统计PV、UV等，学习过网络攻防，了解常用的Web渗透技术。
+                            </li>
+                            <li>7. 爬取某机构题库，付费参加某机构培训课程，机构提供6个月刷题服务，因为机构系统没有搜索功能，另外想存储这部分内容，使用Selenium 、DrissionPage一次性爬取绝大多数题库，存储在MySQL中，logstash同步到ElasticSearch提供搜索服务。
                             </li>
                         </ul>
-                        <p>在21、22年左右购买了多台阿里云服务器实现真实集群环境。被攻击过、黑过，数据库数据被劫持过。在安全和微服务方面有极大提升。
                         </p>
                     </blockquote>
                 </div>
             </div>
-
-
         </div><!-- .col-sm-6 -->
 
 
