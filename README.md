@@ -17,5 +17,5 @@ Jekyll build
 如果已经部署到服务器上，运行下面替换命令
 
 ```shell
-sed -i 's/\/resume\.io/\./g' index.html
+sed -i '' 's#/resume.io#.#g' _site/index.html
 ```
